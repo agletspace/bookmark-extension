@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ブックマークツリー - オプション</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">★ ブックマークツリー <span class="sub">オプション</span></h1>
+
+    <div class="section">
+      <h2 class="section-title">サイズ設定</h2>
+
+      <div class="row">
+        <label class="label">
+          <span class="label-text">ポップアップの幅</span>
+          <span class="value-badge" id="width-val">360 px</span>
+        </label>
+        <input type="range" id="width-slider" min="280" max="800" step="10" value="360" />
+        <div class="range-hints"><span>280px</span><span>800px</span></div>
+      </div>
+
+      <div class="row">
+        <label class="label">
+          <span class="label-text">フォントサイズ</span>
+          <span class="value-badge" id="font-val">13 px</span>
+        </label>
+        <input type="range" id="font-slider" min="10" max="18" step="1" value="13" />
+        <div class="range-hints"><span>10px</span><span>18px</span></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">カラー設定</h2>
+
+      <div class="row row-color">
+        <span class="label-text">背景色</span>
+        <div class="color-right">
+          <input type="color" id="color-bg" value="#1e1e2e" />
+          <button class="btn-reset" data-target="color-bg" data-default="#1e1e2e">リセット</button>
+        </div>
+      </div>
+
+      <div class="row row-color">
+        <span class="label-text">フォルダの色</span>
+        <div class="color-right">
+          <input type="color" id="color-folder" value="#89b4fa" />
+          <button class="btn-reset" data-target="color-folder" data-default="#89b4fa">リセット</button>
+        </div>
+      </div>
+
+      <div class="row row-color">
+        <span class="label-text">ブックマークの色</span>
+        <div class="color-right">
+          <input type="color" id="color-link" value="#cdd6f4" />
+          <button class="btn-reset" data-target="color-link" data-default="#cdd6f4">リセット</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="btn-save" class="btn-primary">保存する</button>
+      <span id="saved-msg" class="saved-msg">✓ 保存しました</span>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
