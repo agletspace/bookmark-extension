@@ -1,9 +1,11 @@
 ﻿const SETTINGS_KEY = 'bm_settings';
 const OPEN_KEY = 'bm_open_folders';
+const SYSTEM_FONT_STACK = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Yu Gothic', Meiryo, sans-serif";
 
 const DEFAULTS = {
   popupWidth: 360,
   fontSize: 13,
+  fontFamily: SYSTEM_FONT_STACK,
   colorBg: '#1e1e2e',
   colorFolder: '#89b4fa',
   colorLink: '#cdd6f4',
@@ -27,6 +29,7 @@ async function loadSettings() {
       openFolders = new Set(result[OPEN_KEY] || []);
 
       document.body.style.fontSize = s.fontSize + 'px';
+      document.body.style.fontFamily = s.fontFamily;
       document.body.style.width = s.popupWidth + 'px';
       document.body.style.maxHeight = '600px';
 
@@ -579,14 +582,3 @@ function showToast(msg) {
   document.body.appendChild(t);
   setTimeout(() => t.remove(), 1800);
 }
-
-
-
-
-
-
-
-
-
-
-

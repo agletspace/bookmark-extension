@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>ブックマークツリー - オプション</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="options.css" />
 </head>
 <body>
@@ -29,6 +28,20 @@
         </label>
         <input type="range" id="font-slider" min="10" max="18" step="1" value="13" />
         <div class="range-hints"><span>10px</span><span>18px</span></div>
+      </div>
+
+      <div class="row">
+        <label class="label" for="font-family">
+          <span class="label-text">ポップアップのフォント</span>
+        </label>
+        <select id="font-family" class="select-input"></select>
+        <input
+          type="text"
+          id="font-family-custom"
+          class="text-input hidden"
+          placeholder="例: BIZ UDPGothic, sans-serif"
+        />
+        <p id="font-preview" class="font-preview">あいうえお ABC 123 ブックマークツリー</p>
       </div>
     </div>
 
